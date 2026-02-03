@@ -13,12 +13,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.context.annotation.Profile;
 
 import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Profile("!lite")
 public class LogIngestionService {
 
     private static final Logger log = LoggerFactory.getLogger(LogIngestionService.class);

@@ -7,11 +7,13 @@ import com.company.loganalyzer.repository.IncidentRepository;
 import com.company.loganalyzer.repository.LogRepository;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Service;
+import org.springframework.context.annotation.Profile;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Profile("!lite")
 public class AiRootCauseService {
 
     private final ChatClient chatClient;

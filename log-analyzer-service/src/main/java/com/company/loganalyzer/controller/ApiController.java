@@ -14,9 +14,12 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+import org.springframework.context.annotation.Profile;
+
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = { "http://localhost:5173", "http://localhost:5180", "http://localhost:3000" })
+@Profile("!lite")
 public class ApiController {
 
         private final IncidentRepository incidentRepository;
