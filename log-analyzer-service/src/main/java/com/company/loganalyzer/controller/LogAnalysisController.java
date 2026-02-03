@@ -4,9 +4,11 @@ import com.company.loganalyzer.ai.AiRootCauseService;
 import com.company.loganalyzer.model.RootCauseAnalysis;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.context.annotation.Profile;
 
 @RestController
 @RequestMapping("/api/incidents")
+@Profile("!lite")
 public class LogAnalysisController {
 
     private final AiRootCauseService aiRootCauseService;

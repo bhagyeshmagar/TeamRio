@@ -12,7 +12,7 @@ start_service() {
 }
 
 # 1. Start Main Backend
-start_service "log-analyzer" "../log-analyzer-service"
+# start_service "log-analyzer" "../log-analyzer-service"
 
 # 2. Start Demo Services
 start_service "api-gateway" "api-gateway"
